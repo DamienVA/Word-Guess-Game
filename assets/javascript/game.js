@@ -1,17 +1,24 @@
-var guess = "";
+var underscores = []
 
 word = ["toyota", "honda", "nissan", "mazda", "subaru"]
 
-random = Math.floor(Math.random() * word.length);
+var random = Math.floor(Math.random() * word.length);
 
 chosenWord = word[random];
-console.log(chosenWord)
 
 
-document.onkeyup = function (event) {
-
-    var guess = event.key.toLowerCase();
-
-
-
+function createUnderscores() {
+    for (let i = 0; i < chosenWord.length; i++) {
+        underscores.push("_");
+    }
+    return underscores;
 }
+console.log(createUnderscores());
+
+// document.onkeyup = function (event) {
+
+//     var guess = event.key.toLowerCase();
+
+
+
+// }
