@@ -3,31 +3,38 @@
     <head>
 
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/reset.css">
         <title>Word Guess Game</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
     </head>
 
     <body>
-        <h1>Word Guess Game</h1>
+        <div class="container">
+        <header>
 
-        <h3>Press any key to get started!</h3>
+            <h1>Word Guess Game</h1>
 
-        <!-- the word being guessed will go here -->
+            <h3>Press any key to get started!</h3>
 
-        <h5>Wins:</h5>
+        </header>
 
-        <h5>Number of Guesses Remaining:</h5>
+        <div class="underscores">_ _ _ _ _</div>
 
-        <h5>Letters already guessed:</h5>
+        <div class="wins">Wins:</div>
+
+        <div class="remaining">Number of Guesses Remaining:</div>
+
+        <div class="ltrGuessed">Letters already guessed:</div>
+        
+        </div>
 
 
 
 
 
 
-
-        <script src="/assets/javascript/game.js"></script>
+        <script src="assets/javascript/game.js"></script>
     </body>
 </html>
