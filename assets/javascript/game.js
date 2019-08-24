@@ -1,21 +1,21 @@
 var underscores = [];
-var word = ["toyota", "honda", "nissan", "mazda", "subaru"];
+var word = ["honda", "mazda", "toyota", "subaru", "mitsubishi", "nissan"];
 var wrong = [];
 var right = [];
 var random = Math.floor(Math.random() * word.length);
+var wins = 0;
 
 var underDoc = document.getElementsByClassName('underscores');
+var wrongDoc = document.getElementsByClassName('ltrGuessed');
 
 chosenWord = word[random];
 console.log(chosenWord);
 
 function createUnderscores() {
-    for (let i = 0; i < chosenWord.length; i++) {
+    for (var i = 0; i < chosenWord.length; i++) {
         underscores.push("_");
     }
-    return underscores;
 };
-console.log(createUnderscores());
 
 document.onkeyup = function (event) {
 
@@ -24,16 +24,20 @@ document.onkeyup = function (event) {
     if (chosenWord.indexOf(ltr) > -1) {
         right.push(ltr);
         underscores[chosenWord.indexOf(ltr)] = ltr;
+        underDoc.innerHTML = underscores.join(' ');
         console.log(underscores);
         if (underscores.join('') == chosenWord) {
             alert('You Win!');
         }
     }
-    else{
-    wrong.push(ltr);
-    console.log(wrong);
-}};
+    else {
+        wrong.push(ltr);
+        console.log(wrong);
+    }
+};
 
-
+createUnderscores();
+console.log(underscores);
+underDoc[0].innerHTML = underscores.join(' ');
 
 
