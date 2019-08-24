@@ -6,7 +6,7 @@ var random = Math.floor(Math.random() * word.length);
 
 chosenWord = word[random];
 
-
+console.log(chosenWord);
 function createUnderscores() {
     for (let i = 0; i < chosenWord.length; i++) {
         underscores.push("_");
@@ -15,10 +15,10 @@ function createUnderscores() {
 }
 console.log(createUnderscores());
 
-// document.onkeyup = function (event) {
+document.onkeyup = function (event) {
 
-//     var guess = event.key.toLowerCase();
+    var ltr = event.key.toLowerCase();
 
+    console.log(ltr);
 
-
-// }
+}
