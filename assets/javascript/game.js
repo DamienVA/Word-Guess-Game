@@ -12,13 +12,15 @@ function createUnderscores() {
         underscores.push("_");
     }
     return underscores;
-}
+};
 console.log(createUnderscores());
 
 document.onkeyup = function (event) {
 
     var ltr = event.key.toLowerCase();
 
-    console.log(ltr);
+    if(chosenWord.indexOf(ltr) > -1) {
+        
+    }
+};
 
-}
